@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.test.vertx423.configfiles</groupId>
+	<artifactId>Vertx-4.2.3-Load-Various-Config-Files-Examples</artifactId>
+	<version>4.2.3</version>
+
+	<packaging>jar</packaging>
+
+	<name>Vertx-4.2.3-Load-Various-Config-Files-Examples</name>
+	<url>https://github.com/rahamath18/Vertx-4.2.3-Load-Various-Config-Files-Examples</url>
+	<description>
+		Example using Vertx 4.2.3 to Load Various Config Files such as json, properties, macros, hocon, 
+			Yaml, Git, Kubernetes Configmap, Redis, Zookeeper, Consul, 
+				Spring Config Server, Vault, and etc...
+	</description>
+
+	<organization>
+		<name>Personal</name>
+		<url>https://rahamaths.appspot.com/</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>rahamath18</id>
+			<name>Rahamath S</name>
+			<email>rahamath18@yahoo.com</email>
+			<organization>Personal</organization>
+			<roles>
+				<role>Project Lead</role>
+			</roles>
+			<timezone>GMT +5.30</timezone>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>Community Project General License</name>
+			<url>https://rahamaths.appspot.com/</url>
+			<comments>
+				Copyright � 2003-2019 rahamaths.appspot.com. All rights reserved.
+				
+				As this is a Community Project General License, 
+				you may use the project or part of the project for your own explore and learnings.
+			</comments>
+		</license>
+	</licenses>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-hocon</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-yaml</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-git</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-consul</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-zookeeper</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-redis</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-kubernetes-configmap</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-spring-config-server</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-config-vault</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-hazelcast</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- We specify the Maven compiler plugin as we need to set it to Java 
+					1.8 -->
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+						<compilerArgs>
+							<arg>-Acodetrans.output=${basedir}/src/main</arg>
+							<arg>-Acodetrans.config=${basedir}/codetrans-config.json</arg>
+						</compilerArgs>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>staging</id>
+			<repositories>
+				<repository>
+					<id>staging</id>
+					<url>https://oss.sonatype.org/content/repositories/iovertx-3868/</url>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+</project>

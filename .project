@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Vertx-4.2.3-Load-Various-Config-Files-Examples</name>
+	<comment>Example using Vertx 4.2.3 to Load Various Config Files such as json, properties, macros, hocon, 
+			Yaml, Git, Kubernetes Configmap, Redis, Zookeeper, Consul, 
+				Spring Config Server, Vault, and etc... NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>

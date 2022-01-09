@@ -1,0 +1,36 @@
+jdbc:
+  password: password
+  username: account
+  url: jdbc:oracle:thin:@localhost:1521:orcl
+  driverClassName: oracle.jdbc.driver.OracleDriver
+logging:
+  pattern:
+    file: '%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level  %class{36}.%M %L  - %msg%n'
+    console: '%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level  %class{36}.%M %L  -
+      %msg%n'
+  level:
+    nodeValue: INFO
+    com:
+      example:
+        account: DEBUG
+  file: /account-microservice/logs/account.log
+hibernate:
+  format_sql: 'true'
+  hbm2ddl:
+    auto: create
+  dialect: org.hibernate.dialect.Oracle12cDialect
+  entity:
+    packagesToScan: com.example.account.domain
+  show_sql: 'true'
+banner:
+  location: classpath:banner.txt
+  charset: UTF-8
+spring:
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: 'true'
+server:
+  servlet:
+    context-path: /account-microservice
+  port: '3001'

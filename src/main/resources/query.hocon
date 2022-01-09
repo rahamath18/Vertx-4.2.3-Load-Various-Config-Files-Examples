@@ -1,0 +1,11 @@
+{
+	jdbc-example {
+		db-queries {
+		    SQL_QUERY_INSERT = ""
+			SQL_QUERY_GET = ""
+			SQL_QUERY_REMOVE = ""
+			SQL_QUERY_UPDATE = ""
+		}
+	}
+} 
+ 
